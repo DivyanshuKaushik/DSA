@@ -97,6 +97,15 @@ node* reverseIterative(node* &head){
     return previousptr;
 }
 // reverse a linkedlist recursive
+node* reverseRecursive(node* &head){
+    if(head==NULL || head->next==NULL){
+        return head;
+    }
+    node* newHead = reverseRecursive(head->next);
+    head->next->next=head;
+    head->next=NULL;
+    return newHead;
+}
 
 int main(){
     node* head = NULL;
@@ -115,7 +124,8 @@ int main(){
     // cout<<"After Deletion at head"<<endl;
     // display(head);
     cout<<"After Reversal"<<endl;
-    node* reversed = reverseIterative(head);
+    // node* reversed = reverseIterative(head);
+    node* reversed = reverseRecursive(head);
     display(reversed);
     return 0;
 }
