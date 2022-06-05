@@ -65,6 +65,14 @@ void deleleAtHead(node* &head){
 }
 
 void deletion(node* &head,int val){
+    // if linkedlist in empty 
+    if(head==NULL){
+        return;
+    }
+    // if linked has only one element 
+    if(head->next==NULL){
+        deleleAtHead(head);
+    }
     node* temp = head;
     while(temp->next->data!=val){
         temp = temp->next;
