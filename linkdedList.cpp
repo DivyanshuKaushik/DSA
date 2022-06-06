@@ -5,12 +5,12 @@ using namespace std;
 // node creation 
 class node{
     public:
-    int data;
-    node *next;
-    node(int data){
-        this->data = data;
-        this->next = NULL;
-    }
+        int data;
+        node *next;
+        node(int data){
+            this->data = data;
+            this->next = NULL;
+        }
 
 };
 
@@ -37,12 +37,18 @@ void insertAtTail(node* &head,int data){
 
 // traversal 
 void display(node* head){
-    node* temp = head;
-    while(temp!=NULL){
-        cout<<temp->data<<" ";
-        temp = temp->next;
+    // node* temp = head;
+    // while(temp!=NULL){
+    //     cout<<temp->data<<" ";
+    //     temp = temp->next;
+    // }
+    // cout<<endl;
+    if(head==NULL || head->next==NULL){
+        cout<<head->data<<endl;
+        return;
     }
-    cout<<endl;
+    cout<<head->data<<endl;
+    display(head->next);
 }
 
 // searching 
