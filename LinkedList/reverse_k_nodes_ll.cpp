@@ -35,9 +35,10 @@ void display(node* head){
     cout<<endl;
 }
 
-node* reverse_k_nodes(node* &head,int k){
+// node* reverse_k_nodes(node* &head,int k){
 
-}
+// return head;
+// }
 
 
 

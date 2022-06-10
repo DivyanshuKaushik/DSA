@@ -44,10 +44,10 @@ void display(node* head){
     // }
     // cout<<endl;
     if(head==NULL || head->next==NULL){
-        cout<<head->data<<endl;
+        cout<<head->data<<" ";
         return;
     }
-    cout<<head->data<<endl;
+    cout<<head->data<<" ";
     display(head->next);
 }
 
@@ -87,6 +87,17 @@ void deletion(node* &head,int val){
     temp->next = todelete->next;
     delete todelete;
 }
+int getNum(node* head){
+    node* temp = head;
+    int i=1;
+    int num=0;
+    while(temp!=NULL){
+        num+=(temp->data * i);
+        i*=10;
+        temp = temp->next;
+    }
+    return num;
+}
 
 // reverse a linkedlist iterative
 node* reverseIterative(node* &head){
@@ -121,6 +132,8 @@ int main(){
     insertAtHead(head,1);
     cout<<"After Insertion"<<endl;
     display(head);
+    cout<<endl;
+    cout<<getNum(head)<<endl;
     // cout<<"After Searching"<<endl;
     // cout<<search(head,3)<<endl;
     // deletion(head,3);
@@ -129,9 +142,9 @@ int main(){
     // deleleAtHead(head);
     // cout<<"After Deletion at head"<<endl;
     // display(head);
-    cout<<"After Reversal"<<endl;
-    // node* reversed = reverseIterative(head);
-    node* reversed = reverseRecursive(head);
-    display(reversed);
+    // cout<<"After Reversal"<<endl;
+    // // node* reversed = reverseIterative(head);
+    // node* reversed = reverseRecursive(head);
+    // display(reversed);
     return 0;
 }
