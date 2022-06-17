@@ -44,7 +44,7 @@ void display(node* head){
     // }
     // cout<<endl;
     if(head==NULL || head->next==NULL){
-        cout<<head->data<<" ";
+        cout<<head->data<<" "<<endl;
         return;
     }
     cout<<head->data<<" ";
@@ -124,27 +124,27 @@ node* reverseRecursive(node* &head){
     return newHead;
 }
 
-int main(){
-    node* head = NULL;
-    insertAtTail(head,2);
-    insertAtTail(head,4);
-    insertAtHead(head,3);
-    insertAtHead(head,1);
-    cout<<"After Insertion"<<endl;
-    display(head);
-    cout<<endl;
-    cout<<getNum(head)<<endl;
-    // cout<<"After Searching"<<endl;
-    // cout<<search(head,3)<<endl;
-    // deletion(head,3);
-    //  cout<<"After Deletion"<<endl;
-    // display(head);
-    // deleleAtHead(head);
-    // cout<<"After Deletion at head"<<endl;
-    // display(head);
-    // cout<<"After Reversal"<<endl;
-    // // node* reversed = reverseIterative(head);
-    // node* reversed = reverseRecursive(head);
-    // display(reversed);
-    return 0;
-}
+// int main(){
+//     node* head = NULL;
+//     insertAtTail(head,2);
+//     insertAtTail(head,4);
+//     insertAtHead(head,3);
+//     insertAtHead(head,1);
+//     cout<<"After Insertion"<<endl;
+//     display(head);
+//     cout<<endl;
+//     cout<<getNum(head)<<endl;
+//     // cout<<"After Searching"<<endl;
+//     // cout<<search(head,3)<<endl;
+//     // deletion(head,3);
+//     //  cout<<"After Deletion"<<endl;
+//     // display(head);
+//     // deleleAtHead(head);
+//     // cout<<"After Deletion at head"<<endl;
+//     // display(head);
+//     // cout<<"After Reversal"<<endl;
+//     // // node* reversed = reverseIterative(head);
+//     // node* reversed = reverseRecursive(head);
+//     // display(reversed);
+//     return 0;
+// }
