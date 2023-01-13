@@ -8,6 +8,8 @@ k = 3
 ******* Solution *******
 
 LL -> 4 5 6 1 2 3   
+
+Solution by DivyanshuKaushik
 */
 
 #include<bits/stdc++.h>
