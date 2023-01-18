@@ -54,12 +54,12 @@ void num_vertical_alter_reverser_pyramid(int n){
     int i = 1;
     while(i<=n){
         int j = 1,dist;
-        if(n-i==0){
-            dist = n + i;
+        // if(n-i==0){
+        //     dist = n + i;
 
-        }{
-            dist = (n-i) * 2;
-        }
+        // }{
+        //     dist = (n-i) * 2;
+        // }
 
         while(j<=i){
             if(j==1){
